@@ -9,3 +9,6 @@ class Eventos(BaseModel):
     local = StringType(max_length=100)
     endereco = StringType(max_length=100)
     site = StringType(max_length=100)
+
+    class Meta:
+        list_allowed_methods = ['get',]

@@ -12,7 +12,7 @@ from mingus.factories import ModelFactory
 from mingus.register import objects
 
 define("port", default=8888, help="run on the given port", type=int)
-define("database", default='test', help="run on the database")
+define("database", default='eventos', help="run on the database")
 define("version", default='v1', help="run on the API version")
 
 

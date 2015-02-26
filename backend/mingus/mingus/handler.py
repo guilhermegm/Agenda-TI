@@ -44,6 +44,7 @@ def generate_response_getlist(request):
     def _request(self, *args, **kwargs):
 
         model = self.model.build(self.prefix, self.request, args, kwargs)
+        print dir(model)
         yield model.getlist(self.request.uri)
         self.response_dict = model.getResponseDict()
         tornado.gen.coroutine(request)(self, *args, **kwargs)

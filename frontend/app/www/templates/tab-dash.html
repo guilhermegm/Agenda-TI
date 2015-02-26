@@ -1,12 +1,28 @@
-<ion-view view-title="Agenda TI">
+<ion-view>
+  <ion-nav-title>
+    <img class="logo" src="img/agenda_ti.png">
+  </ion-nav-title>
   <ion-content class="padding">
 
-    <div class="list card" ng-repeat="evento in eventos.page.objects">
+    <div class="list card" ng-repeat="evento in eventos.page.objects | orderBy:'data.$date'">
       <div class="item item-divider">{{ evento.nome }}</div>
       <div class="item item-body">
-        <div>
-          {{ evento }}
+        <div ng-show="evento.data">
+          <span>Data:<span> {{ evento.data.$date | dateFromTimestamp | date:'dd/MM/yyyy' }}
         </div>
+
+        <div ng-show="evento.local">
+          <span>Local:<span> {{ evento.local }}
+        </div>
+
+        <div ng-show="evento.endereco">
+          <span>Endereço:<span> {{ evento.endereco }}
+        </div>
+
+        <div ng-show="evento.site">
+          <a href="{{ evento.site }}">{{ evento.site }}</a>
+        </div>
+
       </div>
     </div>
 

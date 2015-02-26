@@ -21,3 +21,14 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+.logo {
+    margin-top: 5px;
+}
+
+.has-tabs, .bar-footer.has-tabs {
+    bottom: 0;
+}
+
+.tabs {
+    display: none;
+}
