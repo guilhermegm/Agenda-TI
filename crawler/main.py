@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import re
+
+from evento_handler import EventoHandler
 from software_livre import SoftwareLivre
 from pymongo import MongoClient
 
