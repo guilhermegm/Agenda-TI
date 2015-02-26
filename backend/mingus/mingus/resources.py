@@ -88,13 +88,13 @@ class Model(object):
         params = self.params.getParams()
 
         if 'limit' in params: 
-            limit = params.get('limit', 50)
+            limit = params.get('limit', 999)
             if int(limit[0]) > 100:
                 limit = 100
             else:
                 limit = int(limit[0])
         else:
-            limit = 50
+            limit = 999
 
         if 'page' in params:
             page = int(params['page'][0])
@@ -321,6 +321,7 @@ try:
     from services.resource import models_factory
 except:
     #pass
-    models_factory = {k: ResourceModel for k in ["GET", "POST", "PUT", "DELETE", "PATCH"]}
+    #models_factory = {k: ResourceModel for k in ["GET", "POST", "PUT", "DELETE", "PATCH"]}
+    models_factory = {k: ResourceModel for k in ["GET"]}
 
 models = models_factory
