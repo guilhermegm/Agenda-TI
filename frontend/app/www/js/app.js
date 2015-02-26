@@ -22,7 +22,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 })
 
 .config(function($tastypieProvider) {
-    $tastypieProvider.setResourceUrl('http://104.236.45.141:8888/v1/');
+    $tastypieProvider.setResourceUrl('http://104.236.45.141/v1/');
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -48,15 +48,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       'tab-dash': {
         templateUrl: 'templates/tab-dash.html',
         controller: 'DashCtrl'
-      }
-    }
-  })
-  .state('tab.chats', {
-    url: '/chats',
-    views: {
-      'tab-chats': {
-        templateUrl: 'templates/tab-chats.html',
-        controller: 'ChatsCtrl'
       }
     }
   });
