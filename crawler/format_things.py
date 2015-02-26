@@ -3,7 +3,7 @@
 import re, locale
 from datetime import datetime
 
-locale.setlocale(locale.LC_TIME, "pt_BR")
+locale.setlocale(locale.LC_TIME, "pt_BR.UTF-8")
 
 class FormatThings():
     meses_pt_br = dict([(datetime.strptime(str(i), '%m').strftime('%B').lower(), i) for i in range(1,13)] + [(datetime.strptime(str(i), '%m').strftime('%b').lower(), i) for i in range(1,13)])
