@@ -22,11 +22,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 })
 
 .config(function($tastypieProvider) {
-    $tastypieProvider.setResourceUrl('http://127.0.0.1:8888/v1/');
-})
-
-.config(function($httpProvider){
-    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    $tastypieProvider.setResourceUrl('http://104.236.45.141:8888/v1/');
 })
 
 .config(function($stateProvider, $urlRouterProvider) {

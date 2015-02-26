@@ -19,7 +19,7 @@ def registra_eventos(eventos):
         if not mongo_eventos.find({'nome': evento['nome']}).count():
             mongo_eventos.insert(evento)
 
-#registra_eventos(software_livre.get_eventos())
+registra_eventos(software_livre.get_eventos())
 
 for e in mongo_eventos.find():
     print e
