@@ -1,6 +1,6 @@
 # Agenda TI
 
-Agenda TI is a mobile app where you can find the next IT events (soon on Play Store).
+Agenda TI is a mobile app where you can find the next IT events, you can download at: https://play.google.com/store/apps/details?id=com.ggm.agendati
 
 *This repo is only to be used as a base or example*
 
